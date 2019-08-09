@@ -42,7 +42,7 @@ After this piece of code paste the following piece of code mentioned below:
   <url-pattern>/*</url-pattern>
 </filter-mapping>
 ```
-After pasting the following lines, save the web.cml file and RESTART the Solr Server!!
+After pasting the following lines, save the web.xml file and RESTART the Solr Server!!
 
 
 And you should be good with the code.
