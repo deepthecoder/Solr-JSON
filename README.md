@@ -43,4 +43,6 @@ After this piece of code paste the following piece of code mentioned below:
 </filter-mapping>
 ```
 After pasting the following lines, save the web.cml file and RESTART the Solr Server!!
+
+
 And you should be good with the code.
