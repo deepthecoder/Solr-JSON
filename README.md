@@ -10,7 +10,7 @@ In the Apache Solr directory in your local system...
 Drill down to the following folder(this is with reference to Windows 10)
 C:\ccc\cccc\cccc\solr-8.2.0\server\solr-webapp\webapp\WEB-INF
 
-Here in this directory, you can find a web.xml file and you can see the following tag
+Here in this directory, you can find a *web.xml* file and you can see the following tag
 
 ```
 <web-app xmlns="http://java.sun.com/xml/ns/javaee"
