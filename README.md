@@ -1,5 +1,8 @@
-# Solr-JSON
+# Solr-JSON Extractor
 This consists of JSON extractor Javascript+HTML file
+You can install Apache Solr from the follwing link:
+https://lucene.apache.org/solr/downloads.html
+
 You might face troubles with the CORS(Cross-Origin Resource Sharing)
 I will be sharing my way of resolving the problem. You can come upp with some other way of solving the same. 
 
