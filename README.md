@@ -20,7 +20,7 @@ Here in this directory, you can find a web.xml file and you can see the followin
 ```
 After this piece of code paste the following piece of code mentioned below:
 
-<filter>
+```<filter>
   <filter-name>cross-origin</filter-name>
   <filter-class>org.eclipse.jetty.servlets.CrossOriginFilter</filter-class>
   <init-param>
@@ -41,6 +41,6 @@ After this piece of code paste the following piece of code mentioned below:
   <filter-name>cross-origin</filter-name>
   <url-pattern>/*</url-pattern>
 </filter-mapping>
-
+```
 After pasting the following lines, save the web.cml file and RESTART the Solr Server!!
 And you should be good with the code.
