@@ -1,0 +1,73 @@
+<!--
+  This extractor is created by Shubharthi Dey,IN 
+  The Apache Solr needs to be installed before this can work hand-in-hand with the Solr Server
+  Apache Solr is by default hosted on port number 8983...So you can check out whether it is running on your system by hitting 
+  https://localhost:8983
+  This file named lastchance.html(Don't go with the name :)  ) has to be deployed on a simple Apache Tomcat Server for testing purpose.
+  You might face problem with CORS (Cross-Origin Resource Sharing)...I have discussed how to resolve the same by following some simple steps mentioned in
+  the Github repo.
+  Enjoying Hacking!!
+-->
+
+
+<html>
+<head>
+    <title>Solr Document Search</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<center><b><h1>Document Search</h1></b></center>
+<br>
+</head>
+<body bgcolor="">
+        <!--div class="mypanel"></div>-->
+        <center>
+          IP Address  <input style='padding-left:90px;' type="text" id ="ip" placeholder="  IP Address  "></input><br>
+        <br>
+        
+        Core Name   <input style='padding-left:90px;' type="text" id ="core" placeholder="  Core Name"></input><br>
+        
+       <p style='padding-left:50px;'>Tag <input style='padding-left:90px;' type="text" id="tag" placeholder="  Tag"></input></p>
+        
+        <p style='padding-left:39px;'>Value <input style='padding-left:90px;' type="text" id="value" placeholder="  Value"></input></p>
+        
+            <br>
+        <input type="submit" name ="Search" onclick="caller(document.getElementById('ip').value,document.getElementById('core').value,document.getElementById('tag').value,document.getElementById('value').value)"></input>
+        <button class="clear">Clear</button>
+        <hr>
+        
+        <h2>Query Result</h2>
+    </center>  
+
+
+    <div id="kuch_bhi"></div>
+    </body>
+
+    <script>
+            function caller(ip,core,tag,val)
+            {    
+                var chalo=$.getJSON('http://'+ip+':8983/solr/'+core+'/select?q='+tag+'%3A'+val+'&wt=json', function(data) {
+                var n=data.response.docs.length;
+                for(var i=0;i<n;i++)
+                {
+                    var obj=data.response.docs[i];
+                    for(x in obj)
+                     {  
+                          var text="<b>" +x+"</b>" +"    :     "+obj[x]
+			///document.write(text)
+                          document.getElementById("kuch_bhi").innerHTML+="<p style='padding-left:737px;'>"+text+"</p>";
+                    }
+                
+                  document.getElementById("kuch_bhi").innerHTML+="<hr>";
+                    
+                }
+                
+             
+            });       
+        }
+    </script>
+   <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("div").empty();
+          });
+        });
+        </script>
