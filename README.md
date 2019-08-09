@@ -12,11 +12,13 @@ C:\ccc\cccc\cccc\solr-8.2.0\server\solr-webapp\webapp\WEB-INF
 
 Here in this directory, you can find a web.xml file and you can see the following tag
 
-```<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+```
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5"
          metadata-complete="true">
+
 ```
 After this piece of code paste the following piece of code mentioned below:
 
